@@ -6,8 +6,6 @@
 
 <title>For My Favourite Person ♡</title>
 
-<meta name="description" content="A little birthday surprise made just for you.">
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
@@ -32,18 +30,9 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(
-            circle at 15% 10%,
-            rgba(255,95,170,.16),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(139,92,246,.16),
-            transparent 30%
-        ),
+        radial-gradient(circle at 15% 10%, rgba(255,95,170,.16), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(139,92,246,.16), transparent 30%),
         var(--bg);
-
     color: var(--text);
     font-family: "DM Sans", sans-serif;
     overflow-x: hidden;
@@ -55,13 +44,10 @@ body::before {
     inset: 0;
     pointer-events: none;
     opacity: .16;
-
-    background-image:
-        radial-gradient(
-            rgba(255,255,255,.7) .6px,
-            transparent .7px
-        );
-
+    background-image: radial-gradient(
+        rgba(255,255,255,.7) .6px,
+        transparent .7px
+    );
     background-size: 22px 22px;
     mix-blend-mode: screen;
 }
@@ -71,33 +57,26 @@ body::before {
     margin: auto;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
-
     display: grid;
     place-items: center;
-
     text-align: center;
-
     padding: 60px 0;
-
     position: relative;
 }
 
 .hero-inner {
     max-width: 760px;
-
     animation: rise 1.2s ease both;
 }
 
 .kicker {
     letter-spacing: .22em;
     text-transform: uppercase;
-
     font-size: .72rem;
-
     color: #d9c9d7;
 }
 
@@ -108,61 +87,44 @@ h2 {
 
 h1 {
     font-size: clamp(3.5rem, 10vw, 7.5rem);
-
     line-height: .88;
-
     margin: 20px 0 18px;
-
     font-weight: 700;
 }
 
 .gradient {
-    background:
-        linear-gradient(
-            120deg,
-            #fff,
-            #ffacd0,
-            #c4b5fd
-        );
-
+    background: linear-gradient(
+        120deg,
+        #fff,
+        #ffacd0,
+        #c4b5fd
+    );
     -webkit-background-clip: text;
     background-clip: text;
-
     color: transparent;
 }
 
 .hero p {
     font-size: 1.05rem;
-
     line-height: 1.8;
-
     color: var(--muted);
-
     max-width: 610px;
-
     margin: 0 auto;
 }
 
-/* ================= BUTTON ================= */
-
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 8px;
 
     margin-top: 28px;
-
     padding: 14px 22px;
 
     border: 1px solid rgba(255,255,255,.16);
-
     border-radius: 999px;
 
     color: #fff;
-
     text-decoration: none;
 
     background:
@@ -176,17 +138,14 @@ h1 {
         0 0 35px rgba(255,126,182,.12);
 
     transition: .25s;
-
     cursor: pointer;
 
     font-family: inherit;
-
     font-size: .95rem;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-
     box-shadow:
         0 0 45px rgba(255,126,182,.22);
 }
@@ -200,25 +159,19 @@ h1 {
     cursor: default;
 }
 
-/* Hide audio elements */
-
 audio {
     display: none;
 }
 
 .scroll {
     position: absolute;
-
     bottom: 24px;
-
     font-size: .75rem;
-
     color: #a99ca8;
-
     letter-spacing: .12em;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 section {
     padding: 90px 0;
@@ -226,47 +179,36 @@ section {
 
 .section-title {
     text-align: center;
-
     margin-bottom: 42px;
 }
 
 .section-title .eyebrow {
     font-size: .72rem;
-
     letter-spacing: .2em;
-
     text-transform: uppercase;
-
     color: #c9a8bd;
 }
 
 h2 {
     font-size: clamp(2.3rem, 6vw, 4rem);
-
     margin: 8px 0;
 }
 
 .section-title p {
     color: var(--muted);
-
     max-width: 620px;
-
     margin: auto;
-
     line-height: 1.7;
 }
 
-/* ================= LETTER ================= */
+/* LETTER */
 
 .letter {
     max-width: 780px;
-
     margin: auto;
-
     padding: 38px;
 
     border: 1px solid var(--line);
-
     border-radius: 28px;
 
     background:
@@ -282,33 +224,24 @@ h2 {
 
 .letter p {
     color: #e9dfe6;
-
     line-height: 1.95;
-
     font-size: 1.02rem;
 }
 
 .signature {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 1.7rem;
-
     color: #ffb1d1;
-
     margin-top: 25px;
 }
 
-/* ================= MEMORIES ================= */
+/* MEMORIES */
 
 .timeline {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 22px;
-
     max-width: 900px;
-
     margin: auto;
 }
 
@@ -316,13 +249,11 @@ h2 {
     padding: 28px;
 
     border: 1px solid var(--line);
-
     border-radius: 24px;
 
     background: var(--card);
 
     position: relative;
-
     overflow: hidden;
 }
 
@@ -344,49 +275,36 @@ h2 {
 
 .date {
     font-size: .76rem;
-
     letter-spacing: .14em;
-
     text-transform: uppercase;
-
     color: #ff9fc7;
 }
 
 .memory h3 {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 2rem;
-
     margin: 10px 0;
 }
 
 .memory p {
     color: var(--muted);
-
     line-height: 1.75;
-
     margin: 0;
 }
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .gallery {
     display: grid;
-
     grid-template-columns: repeat(12, 1fr);
-
     gap: 14px;
 }
 
 .photo {
     border: 1px solid var(--line);
-
     border-radius: 20px;
-
     overflow: hidden;
-
     background: #111;
-
     min-height: 250px;
 }
 
@@ -412,15 +330,10 @@ h2 {
 
 .photo img {
     width: 100%;
-
     height: 100%;
-
     min-height: 250px;
-
     object-fit: cover;
-
     display: block;
-
     transition: transform .6s;
 }
 
@@ -428,13 +341,11 @@ h2 {
     transform: scale(1.04);
 }
 
-/* ================= REASONS ================= */
+/* REASONS */
 
 .reasons {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 16px;
 }
 
@@ -442,11 +353,9 @@ h2 {
     padding: 26px;
 
     border: 1px solid var(--line);
-
     border-radius: 22px;
 
     background: var(--card);
-
     text-align: center;
 }
 
@@ -456,21 +365,17 @@ h2 {
 
 .reason h3 {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 1.7rem;
-
     margin: 12px 0 6px;
 }
 
 .reason p {
     color: var(--muted);
-
     line-height: 1.6;
-
     font-size: .93rem;
 }
 
-/* ================= SECRET ================= */
+/* SECRET */
 
 .secret {
     text-align: center;
@@ -478,13 +383,10 @@ h2 {
 
 .secret-box {
     max-width: 680px;
-
     margin: auto;
-
     padding: 38px;
 
     border: 1px solid rgba(255,126,182,.2);
-
     border-radius: 28px;
 
     background:
@@ -500,118 +402,90 @@ h2 {
     display: none;
 
     color: #f5e9ef;
-
     line-height: 1.9;
-
     margin-top: 24px;
 }
 
 .secret-message.show {
     display: block;
-
     animation: rise .7s ease both;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer {
     text-align: center;
-
     padding: 60px 0 80px;
-
     color: #8f828d;
-
     font-size: .85rem;
 }
 
 .heart {
     display: inline-block;
-
     color: #ff83b8;
-
     animation: pulse 1.3s infinite;
 }
 
-/* ================= FLOATING HEARTS ================= */
+/* FLOATING HEARTS */
 
 #hearts {
     position: fixed;
-
     inset: 0;
-
     pointer-events: none;
-
     overflow: hidden;
-
     z-index: 5;
 }
 
 .fheart {
     position: absolute;
-
     bottom: -30px;
-
     opacity: 0;
-
     font-size: 18px;
 
     animation:
         float 6s linear forwards;
 }
 
-/* ================= CONFETTI ================= */
+/* CONFETTI */
 
 .confetti {
     position: fixed;
-
     inset: 0;
-
     pointer-events: none;
-
     z-index: 10;
 }
 
 .conf {
     position: absolute;
-
     width: 7px;
-
     height: 13px;
-
     top: -20px;
 
     animation:
         fall 3.2s linear forwards;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ANIMATIONS */
 
 @keyframes rise {
-
     from {
         opacity: 0;
-
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
-
         transform: none;
     }
-
 }
 
 @keyframes pulse {
-
     50% {
         transform: scale(1.18);
     }
-
 }
 
 @keyframes float {
-
     0% {
         transform:
             translateY(0)
@@ -631,11 +505,9 @@ footer {
 
         opacity: 0;
     }
-
 }
 
 @keyframes fall {
-
     to {
         transform:
             translateY(110vh)
@@ -643,10 +515,9 @@ footer {
 
         opacity: 0;
     }
-
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:720px) {
 
@@ -666,7 +537,6 @@ footer {
     .photo,
     .photo:nth-child(n) {
         grid-column: auto;
-
         min-height: 300px;
     }
 
@@ -686,26 +556,14 @@ footer {
                 5rem
             );
     }
-
 }
-
 </style>
 </head>
 
 
 <body>
 
-
-<!-- =========================================
-     FLOATING HEARTS
-========================================= -->
-
 <div id="hearts"></div>
-
-
-<!-- =========================================
-     CONFETTI
-========================================= -->
 
 <div
     class="confetti"
@@ -713,10 +571,7 @@ footer {
 ></div>
 
 
-
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -751,7 +606,7 @@ footer {
         </p>
 
 
-        <!-- EXISTING BIRTHDAY SONG -->
+        <!-- MAIN BIRTHDAY SONG -->
 
         <audio
             id="birthdayAudio"
@@ -780,26 +635,17 @@ footer {
 
 
     <div class="scroll">
-
         SCROLL SLOWLY ↓
-
     </div>
 
 </header>
 
 
 
-<!-- =========================================
-     MAIN
-========================================= -->
-
 <main id="surprise">
 
 
-
-<!-- =========================================
-     LETTER
-========================================= -->
+<!-- LETTER -->
 
 <section>
 
@@ -891,9 +737,7 @@ footer {
 
 
 
-<!-- =========================================
-     MEMORIES
-========================================= -->
+<!-- MEMORIES -->
 
 <section>
 
@@ -913,7 +757,6 @@ footer {
 
 
         <div class="timeline">
-
 
             <article class="memory">
 
@@ -936,7 +779,6 @@ footer {
             </article>
 
 
-
             <article class="memory">
 
                 <div class="date">
@@ -957,7 +799,6 @@ footer {
 
             </article>
 
-
         </div>
 
     </div>
@@ -966,9 +807,7 @@ footer {
 
 
 
-<!-- =========================================
-     GALLERY
-========================================= -->
+<!-- GALLERY -->
 
 <section>
 
@@ -994,56 +833,44 @@ footer {
 
         <div class="gallery">
 
-
             <div class="photo">
-
                 <img
                     src="images/photo1.jpeg"
                     alt="A favourite memory"
                 >
-
             </div>
 
 
             <div class="photo">
-
                 <img
                     src="images/photo2.jpeg"
                     alt="A favourite memory"
                 >
-
             </div>
 
 
             <div class="photo">
-
                 <img
                     src="images/photo3.jpeg"
                     alt="A favourite memory"
                 >
-
             </div>
 
 
             <div class="photo">
-
                 <img
                     src="images/photo4.jpeg"
                     alt="A favourite memory"
                 >
-
             </div>
 
 
             <div class="photo">
-
                 <img
                     src="images/photo5.jpeg"
                     alt="A favourite memory"
                 >
-
             </div>
-
 
         </div>
 
@@ -1053,9 +880,7 @@ footer {
 
 
 
-<!-- =========================================
-     WHY SPECIAL
-========================================= -->
+<!-- WHY SPECIAL -->
 
 <section>
 
@@ -1076,7 +901,6 @@ footer {
 
         <div class="reasons">
 
-
             <div class="reason">
 
                 <div class="emoji">
@@ -1093,7 +917,6 @@ footer {
                 </p>
 
             </div>
-
 
 
             <div class="reason">
@@ -1114,7 +937,6 @@ footer {
             </div>
 
 
-
             <div class="reason">
 
                 <div class="emoji">
@@ -1133,7 +955,6 @@ footer {
 
             </div>
 
-
         </div>
 
     </div>
@@ -1142,9 +963,7 @@ footer {
 
 
 
-<!-- =========================================
-     SECRET
-========================================= -->
+<!-- SECRET -->
 
 <section class="secret">
 
@@ -1209,6 +1028,21 @@ footer {
                 smile a lot, and don't forget that
                 your beastie is rooting for you. 🖤💗
 
+                <br><br>
+
+                <span
+                    style="
+                        color:#ffafd0;
+                        font-family:'Cormorant Garamond',serif;
+                        font-size:1.35rem;
+                    "
+                >
+                    “I don't know how much this little
+                    surprise means to you, but I made it
+                    hoping it would make you smile.
+                    That's enough for me. ♡”
+                </span>
+
             </div>
 
         </div>
@@ -1222,9 +1056,7 @@ footer {
 
 
 
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1244,17 +1076,11 @@ footer {
 
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
 <script>
 
 /* =========================================
-   EXISTING BIRTHDAY SONG
-
-   ONLY plays when:
-   "Open your surprise 🎁" is clicked
+   MAIN BIRTHDAY SONG
+   Plays only on Open Your Surprise
 ========================================= */
 
 const openSurprise =
@@ -1275,7 +1101,7 @@ openSurprise.addEventListener(
             .catch(function (error) {
 
                 console.log(
-                    "Birthday audio error:",
+                    "Birthday song error:",
                     error
                 );
 
@@ -1289,10 +1115,9 @@ openSurprise.addEventListener(
 
 
 /* =========================================
-   3 NEW RANDOM CLICK SOUNDS
+   THREE RANDOM CLICK SOUNDS
 
-   Put these 3 files in ROOT:
-
+   Files:
    sound1.mp3
    sound2.mp3
    sound3.mp3
@@ -1312,38 +1137,34 @@ const randomClickSounds = [
 let lastClickSound = -1;
 
 
-/*
-   This works for clicks anywhere on the page.
-
-   EXCEPT:
-   Open your surprise button
-
-   because that button has the main
-   birthday song.
-*/
-
 document.addEventListener(
     "click",
     function (event) {
 
-        /* Don't play random sound
-           on birthday button */
+        /*
+         * Don't trigger random sound
+         * when Open Your Surprise is clicked.
+         *
+         * That button plays the main
+         * birthday song.
+         */
 
         if (
             event.target.closest(
                 "#openSurprise"
             )
         ) {
-
             return;
-
         }
 
 
-        /* Choose random sound */
-
         let randomIndex;
 
+
+        /*
+         * Avoid playing the same sound
+         * twice in a row.
+         */
 
         do {
 
@@ -1365,21 +1186,23 @@ document.addEventListener(
             randomIndex;
 
 
-        /* Stop any previous
-           random click sound */
+        /*
+         * Stop previous random sound
+         */
 
         randomClickSounds.forEach(
             function (sound) {
 
                 sound.pause();
-
                 sound.currentTime = 0;
 
             }
         );
 
 
-        /* Play selected sound */
+        /*
+         * Play selected random sound
+         */
 
         const selectedSound =
             randomClickSounds[randomIndex];
@@ -1393,7 +1216,7 @@ document.addEventListener(
             .catch(function (error) {
 
                 console.log(
-                    "Random click sound error:",
+                    "Random sound error:",
                     error
                 );
 
@@ -1520,12 +1343,10 @@ function burst() {
 
 
         const colors = [
-
             "#ff7eb6",
             "#c4b5fd",
             "#ffffff",
             "#f9a8d4"
-
         ];
 
 
@@ -1553,24 +1374,6 @@ function burst() {
     }
 
 }
-
-
-
-/* =========================================
-   INITIAL CONFETTI
-========================================= */
-
-window.addEventListener(
-    "load",
-    function () {
-
-        setTimeout(
-            burst,
-            700
-        );
-
-    }
-);
 
 
 
