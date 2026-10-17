@@ -12,1128 +12,1208 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #08060b;
-  --card: rgba(255,255,255,.055);
-  --line: rgba(255,255,255,.12);
-  --text: #fff7fb;
-  --muted: #cbbec9;
-  --pink: #ff7eb6;
-  --purple: #a78bfa;
+    --bg: #08060b;
+    --card: rgba(255,255,255,.055);
+    --line: rgba(255,255,255,.12);
+    --text: #fff7fb;
+    --muted: #cbbec9;
+    --pink: #ff7eb6;
+    --purple: #a78bfa;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(255,95,170,.16),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(139,92,246,.16),
-      transparent 30%
-    ),
-    var(--bg);
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255,95,170,.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(139,92,246,.16),
+            transparent 30%
+        ),
+        var(--bg);
 
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
 }
 
-/* Subtle stars */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .16;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .16;
 
-  background-image:
-    radial-gradient(
-      rgba(255,255,255,.7) .6px,
-      transparent .7px
-    );
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.7) .6px,
+            transparent .7px
+        );
 
-  background-size: 22px 22px;
-  mix-blend-mode: screen;
+    background-size: 22px 22px;
+    mix-blend-mode: screen;
 }
 
 .container {
-  width: min(1050px, 92%);
-  margin: auto;
+    width: min(1050px, 92%);
+    margin: auto;
 }
 
 /* ================= HERO ================= */
 
 .hero {
-  min-height: 100vh;
+    min-height: 100vh;
 
-  display: grid;
-  place-items: center;
+    display: grid;
+    place-items: center;
 
-  text-align: center;
+    text-align: center;
 
-  padding: 60px 0;
+    padding: 60px 0;
 
-  position: relative;
+    position: relative;
 }
 
 .hero-inner {
-  max-width: 760px;
+    max-width: 760px;
 
-  animation: rise 1.2s ease both;
+    animation: rise 1.2s ease both;
 }
 
 .kicker {
-  letter-spacing: .22em;
-  text-transform: uppercase;
+    letter-spacing: .22em;
+    text-transform: uppercase;
 
-  font-size: .72rem;
+    font-size: .72rem;
 
-  color: #d9c9d7;
+    color: #d9c9d7;
 }
 
 h1,
 h2 {
-  font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 }
 
 h1 {
-  font-size: clamp(3.5rem, 10vw, 7.5rem);
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
 
-  line-height: .88;
+    line-height: .88;
 
-  margin: 20px 0 18px;
+    margin: 20px 0 18px;
 
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .gradient {
-  background:
-    linear-gradient(
-      120deg,
-      #fff,
-      #ffacd0,
-      #c4b5fd
-    );
+    background:
+        linear-gradient(
+            120deg,
+            #fff,
+            #ffacd0,
+            #c4b5fd
+        );
 
-  -webkit-background-clip: text;
-  background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-  color: transparent;
+    color: transparent;
 }
 
 .hero p {
-  font-size: 1.05rem;
+    font-size: 1.05rem;
 
-  line-height: 1.8;
+    line-height: 1.8;
 
-  color: var(--muted);
+    color: var(--muted);
 
-  max-width: 610px;
+    max-width: 610px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
-/* Button */
+/* ================= BUTTON ================= */
 
 .btn {
-  display: inline-flex;
+    display: inline-flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  gap: 8px;
+    gap: 8px;
 
-  margin-top: 28px;
+    margin-top: 28px;
 
-  padding: 14px 22px;
+    padding: 14px 22px;
 
-  border: 1px solid rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.16);
 
-  border-radius: 999px;
+    border-radius: 999px;
 
-  color: #fff;
+    color: #fff;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,126,182,.18),
-      rgba(167,139,250,.14)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,126,182,.18),
+            rgba(167,139,250,.14)
+        );
 
-  box-shadow:
-    0 0 35px rgba(255,126,182,.12);
+    box-shadow:
+        0 0 35px rgba(255,126,182,.12);
 
-  transition: .25s;
+    transition: .25s;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  font-family: inherit;
-  font-size: .95rem;
+    font-family: inherit;
+
+    font-size: .95rem;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  box-shadow:
-    0 0 45px rgba(255,126,182,.22);
+    box-shadow:
+        0 0 45px rgba(255,126,182,.22);
+}
+
+.btn:active {
+    transform: scale(.96);
 }
 
 .btn:disabled {
-  opacity: .7;
-  cursor: default;
+    opacity: .7;
+    cursor: default;
 }
 
-/* Hide audio player */
+/* Hide audio elements */
 
-#birthdayAudio {
-  display: none;
+audio {
+    display: none;
 }
 
 .scroll {
-  position: absolute;
+    position: absolute;
 
-  bottom: 24px;
+    bottom: 24px;
 
-  font-size: .75rem;
+    font-size: .75rem;
 
-  color: #a99ca8;
+    color: #a99ca8;
 
-  letter-spacing: .12em;
+    letter-spacing: .12em;
 }
 
 /* ================= SECTIONS ================= */
 
 section {
-  padding: 90px 0;
+    padding: 90px 0;
 }
 
 .section-title {
-  text-align: center;
+    text-align: center;
 
-  margin-bottom: 42px;
+    margin-bottom: 42px;
 }
 
 .section-title .eyebrow {
-  font-size: .72rem;
+    font-size: .72rem;
 
-  letter-spacing: .2em;
+    letter-spacing: .2em;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  color: #c9a8bd;
+    color: #c9a8bd;
 }
 
 h2 {
-  font-size: clamp(2.3rem, 6vw, 4rem);
+    font-size: clamp(2.3rem, 6vw, 4rem);
 
-  margin: 8px 0;
+    margin: 8px 0;
 }
 
 .section-title p {
-  color: var(--muted);
+    color: var(--muted);
 
-  max-width: 620px;
+    max-width: 620px;
 
-  margin: auto;
+    margin: auto;
 
-  line-height: 1.7;
+    line-height: 1.7;
 }
 
 /* ================= LETTER ================= */
 
 .letter {
-  max-width: 780px;
+    max-width: 780px;
 
-  margin: auto;
+    margin: auto;
 
-  padding: 38px;
+    padding: 38px;
 
-  border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-  border-radius: 28px;
+    border-radius: 28px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.07),
-      rgba(255,255,255,.025)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
 
-  box-shadow:
-    0 20px 80px rgba(0,0,0,.3);
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.3);
 }
 
 .letter p {
-  color: #e9dfe6;
+    color: #e9dfe6;
 
-  line-height: 1.95;
+    line-height: 1.95;
 
-  font-size: 1.02rem;
+    font-size: 1.02rem;
 }
 
 .signature {
-  font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 
-  color: #ffb1d1;
+    color: #ffb1d1;
 
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 /* ================= MEMORIES ================= */
 
 .timeline {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-  gap: 22px;
+    gap: 22px;
 
-  max-width: 900px;
+    max-width: 900px;
 
-  margin: auto;
+    margin: auto;
 }
 
 .memory {
-  padding: 28px;
+    padding: 28px;
 
-  border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-  border-radius: 24px;
+    border-radius: 24px;
 
-  background: var(--card);
+    background: var(--card);
 
-  position: relative;
+    position: relative;
 
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .memory::after {
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  width: 140px;
-  height: 140px;
+    width: 140px;
+    height: 140px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  right: -70px;
-  top: -70px;
+    right: -70px;
+    top: -70px;
 
-  background: rgba(255,126,182,.08);
+    background: rgba(255,126,182,.08);
 }
 
 .date {
-  font-size: .76rem;
+    font-size: .76rem;
 
-  letter-spacing: .14em;
+    letter-spacing: .14em;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  color: #ff9fc7;
+    color: #ff9fc7;
 }
 
 .memory h3 {
-  font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size: 2rem;
+    font-size: 2rem;
 
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .memory p {
-  color: var(--muted);
+    color: var(--muted);
 
-  line-height: 1.75;
+    line-height: 1.75;
 
-  margin: 0;
+    margin: 0;
 }
 
 /* ================= GALLERY ================= */
 
 .gallery {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 
-  gap: 14px;
+    gap: 14px;
 }
 
 .photo {
-  border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-  border-radius: 20px;
+    border-radius: 20px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  background: #111;
+    background: #111;
 
-  min-height: 250px;
+    min-height: 250px;
 }
 
 .photo:nth-child(1) {
-  grid-column: span 7;
+    grid-column: span 7;
 }
 
 .photo:nth-child(2) {
-  grid-column: span 5;
+    grid-column: span 5;
 }
 
 .photo:nth-child(3) {
-  grid-column: span 5;
+    grid-column: span 5;
 }
 
 .photo:nth-child(4) {
-  grid-column: span 7;
+    grid-column: span 7;
 }
 
 .photo:nth-child(5) {
-  grid-column: 4 / span 5;
+    grid-column: 4 / span 5;
 }
 
 .photo img {
-  width: 100%;
+    width: 100%;
 
-  height: 100%;
+    height: 100%;
 
-  min-height: 250px;
+    min-height: 250px;
 
-  object-fit: cover;
+    object-fit: cover;
 
-  display: block;
+    display: block;
 
-  transition: transform .6s;
+    transition: transform .6s;
 }
 
 .photo:hover img {
-  transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 /* ================= REASONS ================= */
 
 .reasons {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-  gap: 16px;
+    gap: 16px;
 }
 
 .reason {
-  padding: 26px;
+    padding: 26px;
 
-  border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-  border-radius: 22px;
+    border-radius: 22px;
 
-  background: var(--card);
+    background: var(--card);
 
-  text-align: center;
+    text-align: center;
 }
 
 .emoji {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .reason h3 {
-  font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 
-  margin: 12px 0 6px;
+    margin: 12px 0 6px;
 }
 
 .reason p {
-  color: var(--muted);
+    color: var(--muted);
 
-  line-height: 1.6;
+    line-height: 1.6;
 
-  font-size: .93rem;
+    font-size: .93rem;
 }
 
 /* ================= SECRET ================= */
 
 .secret {
-  text-align: center;
+    text-align: center;
 }
 
 .secret-box {
-  max-width: 680px;
+    max-width: 680px;
 
-  margin: auto;
+    margin: auto;
 
-  padding: 38px;
+    padding: 38px;
 
-  border: 1px solid rgba(255,126,182,.2);
+    border: 1px solid rgba(255,126,182,.2);
 
-  border-radius: 28px;
+    border-radius: 28px;
 
-  background:
-    radial-gradient(
-      circle at 50% 0,
-      rgba(255,126,182,.12),
-      transparent 55%
-    ),
-    var(--card);
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(255,126,182,.12),
+            transparent 55%
+        ),
+        var(--card);
 }
 
 .secret-message {
-  display: none;
+    display: none;
 
-  color: #f5e9ef;
+    color: #f5e9ef;
 
-  line-height: 1.9;
+    line-height: 1.9;
 
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .secret-message.show {
-  display: block;
+    display: block;
 
-  animation: rise .7s ease both;
+    animation: rise .7s ease both;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-  text-align: center;
+    text-align: center;
 
-  padding: 60px 0 80px;
+    padding: 60px 0 80px;
 
-  color: #8f828d;
+    color: #8f828d;
 
-  font-size: .85rem;
+    font-size: .85rem;
 }
 
 .heart {
-  display: inline-block;
+    display: inline-block;
 
-  color: #ff83b8;
+    color: #ff83b8;
 
-  animation: pulse 1.3s infinite;
+    animation: pulse 1.3s infinite;
 }
 
 /* ================= FLOATING HEARTS ================= */
 
 #hearts {
-  position: fixed;
+    position: fixed;
 
-  inset: 0;
+    inset: 0;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  z-index: 5;
+    z-index: 5;
 }
 
 .fheart {
-  position: absolute;
+    position: absolute;
 
-  bottom: -30px;
+    bottom: -30px;
 
-  opacity: 0;
+    opacity: 0;
 
-  font-size: 18px;
+    font-size: 18px;
 
-  animation:
-    float 6s linear forwards;
+    animation:
+        float 6s linear forwards;
 }
 
 /* ================= CONFETTI ================= */
 
 .confetti {
-  position: fixed;
+    position: fixed;
 
-  inset: 0;
+    inset: 0;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  z-index: 10;
+    z-index: 10;
 }
 
 .conf {
-  position: absolute;
+    position: absolute;
 
-  width: 7px;
+    width: 7px;
 
-  height: 13px;
+    height: 13px;
 
-  top: -20px;
+    top: -20px;
 
-  animation:
-    fall 3.2s linear forwards;
+    animation:
+        fall 3.2s linear forwards;
 }
 
 /* ================= ANIMATIONS ================= */
 
 @keyframes rise {
-  from {
-    opacity: 0;
 
-    transform: translateY(25px);
-  }
+    from {
+        opacity: 0;
 
-  to {
-    opacity: 1;
+        transform: translateY(25px);
+    }
 
-    transform: none;
-  }
+    to {
+        opacity: 1;
+
+        transform: none;
+    }
+
 }
 
 @keyframes pulse {
-  50% {
-    transform: scale(1.18);
-  }
+
+    50% {
+        transform: scale(1.18);
+    }
+
 }
 
 @keyframes float {
-  0% {
-    transform:
-      translateY(0)
-      rotate(0);
 
-    opacity: 0;
-  }
+    0% {
+        transform:
+            translateY(0)
+            rotate(0);
 
-  10% {
-    opacity: .75;
-  }
+        opacity: 0;
+    }
 
-  100% {
-    transform:
-      translateY(-110vh)
-      rotate(360deg);
+    10% {
+        opacity: .75;
+    }
 
-    opacity: 0;
-  }
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
 }
 
 @keyframes fall {
-  to {
-    transform:
-      translateY(110vh)
-      rotate(720deg);
 
-    opacity: 0;
-  }
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:720px) {
 
-  section {
-    padding: 70px 0;
-  }
+    section {
+        padding: 70px 0;
+    }
 
-  .timeline,
-  .reasons {
-    grid-template-columns: 1fr;
-  }
+    .timeline,
+    .reasons {
+        grid-template-columns: 1fr;
+    }
 
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 
-  .photo,
-  .photo:nth-child(n) {
-    grid-column: auto;
+    .photo,
+    .photo:nth-child(n) {
+        grid-column: auto;
 
-    min-height: 300px;
-  }
+        min-height: 300px;
+    }
 
-  .photo img {
-    min-height: 300px;
-  }
+    .photo img {
+        min-height: 300px;
+    }
 
-  .letter {
-    padding: 25px;
-  }
+    .letter {
+        padding: 25px;
+    }
 
-  h1 {
-    font-size: clamp(3.3rem, 16vw, 5rem);
-  }
+    h1 {
+        font-size:
+            clamp(
+                3.3rem,
+                16vw,
+                5rem
+            );
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- Floating hearts -->
+
+<!-- =========================================
+     FLOATING HEARTS
+========================================= -->
+
 <div id="hearts"></div>
 
-<!-- Confetti -->
-<div class="confetti" id="confetti"></div>
+
+<!-- =========================================
+     CONFETTI
+========================================= -->
+
+<div
+    class="confetti"
+    id="confetti"
+></div>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <header class="hero">
 
-  <div class="hero-inner">
+    <div class="hero-inner">
 
-    <div class="kicker">
-      A little corner of the internet • made just for you
+        <div class="kicker">
+            A little corner of the internet • made just for you
+        </div>
+
+
+        <h1>
+
+            For My
+
+            <span class="gradient">
+                Favourite Person
+            </span>
+
+            ♡
+
+        </h1>
+
+
+        <p>
+
+            Not a big gift. Not anything fancy.<br>
+
+            Just a small surprise for someone
+            who somehow became one of my favourite
+            parts of my days. ✨
+
+        </p>
+
+
+        <!-- EXISTING BIRTHDAY SONG -->
+
+        <audio
+            id="birthdayAudio"
+            preload="auto"
+        >
+
+            <source
+                src="birthday-song.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+
+        <a
+            class="btn"
+            id="openSurprise"
+            href="#surprise"
+        >
+
+            Open your surprise 🎁
+
+        </a>
+
     </div>
 
-    <h1>
-      For My
-      <span class="gradient">
-        Favourite Person
-      </span>
-      ♡
-    </h1>
 
-    <p>
-      Not a big gift. Not anything fancy.<br>
+    <div class="scroll">
 
-      Just a small surprise for someone who somehow became
-      one of my favourite parts of my days. ✨
-    </p>
+        SCROLL SLOWLY ↓
 
-
-    <!--
-      IMPORTANT:
-      Song starts when this button is clicked.
-    -->
-
-    <audio id="birthdayAudio" preload="auto">
-      <source src="birthday-song.mp3" type="audio/mpeg">
-    </audio>
-
-
-    <a
-      class="btn"
-      id="openSurprise"
-      href="#surprise"
-    >
-      Open your surprise 🎁
-    </a>
-
-  </div>
-
-
-  <div class="scroll">
-    SCROLL SLOWLY ↓
-  </div>
+    </div>
 
 </header>
 
 
 
-<!-- ================= MAIN ================= -->
+<!-- =========================================
+     MAIN
+========================================= -->
 
 <main id="surprise">
 
 
-<!-- ================= LETTER ================= -->
+
+<!-- =========================================
+     LETTER
+========================================= -->
 
 <section>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-title">
 
-      <div class="eyebrow">
-        A note from your beastie
-      </div>
+            <div class="eyebrow">
+                A note from your beastie
+            </div>
 
-      <h2>
-        Happy Birthday, you. ♡
-      </h2>
+            <h2>
+                Happy Birthday, you. ♡
+            </h2>
+
+        </div>
+
+
+        <div class="letter">
+
+            <p>
+                Heyyy… Happy Birthday to my favourite person. 🥹🎂
+            </p>
+
+
+            <p>
+                I honestly didn't know what to give you,
+                so I thought I'd make you a little place instead —
+                something you can open whenever you want
+                and remember that someone out here was thinking about you.
+            </p>
+
+
+            <p>
+                It's kinda funny how one random message on Instagram
+                on <b>6 September</b> turned into so many little
+                conversations and memories.
+            </p>
+
+
+            <p>
+                And then there was
+                <b>13 September</b>…
+                talking till 2 AM is still one of my favourite
+                memories with you. 🌙
+            </p>
+
+
+            <p>
+                You're cute, you're a little pagal 😂,
+                and somehow you've become genuinely special to me.
+                I don't know if you realise it,
+                but your presence can make an ordinary day
+                feel a little better.
+            </p>
+
+
+            <p>
+                I just hope this new year of your life brings you
+                loads of happiness, peaceful days,
+                stupidly big smiles and everything
+                you've been wishing for.
+            </p>
+
+
+            <p>
+                And hey…
+                I hope our little conversations stay
+                a part of it too. 🫶
+            </p>
+
+
+            <p>
+                No pressure, no expectations —
+                just wanted you to know that
+                <b>you're important to me.</b>
+            </p>
+
+
+            <div class="signature">
+                — Your Beastie ♡
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="letter">
-
-      <p>
-        Heyyy… Happy Birthday to my favourite person. 🥹🎂
-      </p>
-
-
-      <p>
-        I honestly didn't know what to give you,
-        so I thought I'd make you a little place instead —
-        something you can open whenever you want
-        and remember that someone out here was thinking about you.
-      </p>
-
-
-      <p>
-        It's kinda funny how one random message on Instagram
-        on <b>6 September</b> turned into so many little
-        conversations and memories.
-      </p>
-
-
-      <p>
-        And then there was
-        <b>13 September</b>…
-        talking till 2 AM is still one of my favourite
-        memories with you. 🌙
-      </p>
-
-
-      <p>
-        You're cute, you're a little pagal 😂,
-        and somehow you've become genuinely special to me.
-        I don't know if you realise it,
-        but your presence can make an ordinary day
-        feel a little better.
-      </p>
-
-
-      <p>
-        I just hope this new year of your life brings you
-        loads of happiness, peaceful days,
-        stupidly big smiles and everything
-        you've been wishing for.
-      </p>
-
-
-      <p>
-        And hey…
-        I hope our little conversations stay
-        a part of it too. 🫶
-      </p>
-
-
-      <p>
-        No pressure, no expectations —
-        just wanted you to know that
-        <b>you're important to me.</b>
-      </p>
-
-
-      <div class="signature">
-        — Your Beastie ♡
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 
-<!-- ================= MEMORIES ================= -->
+<!-- =========================================
+     MEMORIES
+========================================= -->
 
 <section>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-title">
 
-      <div class="eyebrow">
-        Two little dates
-      </div>
+            <div class="eyebrow">
+                Two little dates
+            </div>
 
-      <h2>
-        How it started… ✨
-      </h2>
+            <h2>
+                How it started… ✨
+            </h2>
 
-    </div>
-
-
-    <div class="timeline">
-
-
-      <article class="memory">
-
-        <div class="date">
-          06 September
         </div>
 
-        <h3>
-          The first message
-        </h3>
 
-        <p>
-          The day I finally sent you that first message
-          on Instagram.
-
-          Didn't know that one small “hey”
-          would become a memory I'd actually keep.
-        </p>
-
-      </article>
+        <div class="timeline">
 
 
+            <article class="memory">
 
-      <article class="memory">
+                <div class="date">
+                    06 September
+                </div>
 
-        <div class="date">
-          13 September • 2:00 AM
+                <h3>
+                    The first message
+                </h3>
+
+                <p>
+                    The day I finally sent you that first
+                    message on Instagram.
+
+                    Didn't know that one small “hey”
+                    would become a memory I'd actually keep.
+                </p>
+
+            </article>
+
+
+
+            <article class="memory">
+
+                <div class="date">
+                    13 September • 2:00 AM
+                </div>
+
+                <h3>
+                    That late-night talk 🌙
+                </h3>
+
+                <p>
+                    One of those conversations where you
+                    look at the time and suddenly realise
+                    it's 2 AM.
+
+                    Still one of my favourite moments with you.
+                </p>
+
+            </article>
+
+
         </div>
 
-        <h3>
-          That late-night talk 🌙
-        </h3>
-
-        <p>
-          One of those conversations where you look at
-          the time and suddenly realise it's 2 AM.
-
-          Still one of my favourite moments with you.
-        </p>
-
-      </article>
-
-
     </div>
-
-  </div>
 
 </section>
 
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =========================================
+     GALLERY
+========================================= -->
 
 <section>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-title">
 
-      <div class="eyebrow">
-        The gallery
-      </div>
+            <div class="eyebrow">
+                The gallery
+            </div>
 
-      <h2>
-        Some pretty moments ♡
-      </h2>
+            <h2>
+                Some pretty moments ♡
+            </h2>
 
-      <p>
-        Because a birthday surprise without
-        a little photo spam would be illegal. 😂
-      </p>
+            <p>
+                Because a birthday surprise without
+                a little photo spam would be illegal. 😂
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <div class="photo">
+
+                <img
+                    src="images/photo1.jpeg"
+                    alt="A favourite memory"
+                >
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="images/photo2.jpeg"
+                    alt="A favourite memory"
+                >
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="images/photo3.jpeg"
+                    alt="A favourite memory"
+                >
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="images/photo4.jpeg"
+                    alt="A favourite memory"
+                >
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="images/photo5.jpeg"
+                    alt="A favourite memory"
+                >
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-    <div class="gallery">
-
-
-      <div class="photo">
-        <img
-          src="images/photo1.jpeg"
-          alt="A favourite memory"
-        >
-      </div>
-
-
-      <div class="photo">
-        <img
-          src="images/photo2.jpeg"
-          alt="A favourite memory"
-        >
-      </div>
-
-
-      <div class="photo">
-        <img
-          src="images/photo3.jpeg"
-          alt="A favourite memory"
-        >
-      </div>
-
-
-      <div class="photo">
-        <img
-          src="images/photo4.jpeg"
-          alt="A favourite memory"
-        >
-      </div>
-
-
-      <div class="photo">
-        <img
-          src="images/photo5.jpeg"
-          alt="A favourite memory"
-        >
-      </div>
-
-
-    </div>
-
-  </div>
 
 </section>
 
 
 
-<!-- ================= WHY SPECIAL ================= -->
+<!-- =========================================
+     WHY SPECIAL
+========================================= -->
 
 <section>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-title">
 
-      <div class="eyebrow">
-        No overthinking
-      </div>
+            <div class="eyebrow">
+                No overthinking
+            </div>
 
-      <h2>
-        Why you're special 🫶
-      </h2>
+            <h2>
+                Why you're special 🫶
+            </h2>
+
+        </div>
+
+
+        <div class="reasons">
+
+
+            <div class="reason">
+
+                <div class="emoji">
+                    🌸
+                </div>
+
+                <h3>
+                    Your vibe
+                </h3>
+
+                <p>
+                    There's something about your vibe
+                    that just makes conversations feel different.
+                </p>
+
+            </div>
+
+
+
+            <div class="reason">
+
+                <div class="emoji">
+                    😂
+                </div>
+
+                <h3>
+                    Your pagal side
+                </h3>
+
+                <p>
+                    Because obviously, the cute + pagal
+                    combination deserves its own section.
+                </p>
+
+            </div>
+
+
+
+            <div class="reason">
+
+                <div class="emoji">
+                    🌙
+                </div>
+
+                <h3>
+                    The little things
+                </h3>
+
+                <p>
+                    It's not always the big moments.
+                    Sometimes it's just a random
+                    late-night conversation.
+                </p>
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-    <div class="reasons">
-
-
-      <div class="reason">
-
-        <div class="emoji">
-          🌸
-        </div>
-
-        <h3>
-          Your vibe
-        </h3>
-
-        <p>
-          There's something about your vibe
-          that just makes conversations feel different.
-        </p>
-
-      </div>
-
-
-
-      <div class="reason">
-
-        <div class="emoji">
-          😂
-        </div>
-
-        <h3>
-          Your pagal side
-        </h3>
-
-        <p>
-          Because obviously, the cute + pagal combination
-          deserves its own section.
-        </p>
-
-      </div>
-
-
-
-      <div class="reason">
-
-        <div class="emoji">
-          🌙
-        </div>
-
-        <h3>
-          The little things
-        </h3>
-
-        <p>
-          It's not always the big moments.
-          Sometimes it's just a random late-night conversation.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
 
 </section>
 
 
 
-<!-- ================= SECRET ================= -->
+<!-- =========================================
+     SECRET
+========================================= -->
 
 <section class="secret">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-title">
 
-      <div class="eyebrow">
-        One last thing
-      </div>
+            <div class="eyebrow">
+                One last thing
+            </div>
 
-      <h2>
-        There's a tiny secret… 👀
-      </h2>
+            <h2>
+                There's a tiny secret… 👀
+            </h2>
+
+        </div>
+
+
+        <div class="secret-box">
+
+            <p style="color:#cbbec9">
+
+                You have to press the button.
+                No cheating. 😂
+
+            </p>
+
+
+            <button
+                class="btn"
+                id="secretBtn"
+                type="button"
+            >
+
+                Unlock it ♡
+
+            </button>
+
+
+            <div
+                class="secret-message"
+                id="secretMessage"
+            >
+
+                <b>
+                    Okay, you found it. 🥹
+                </b>
+
+                <br><br>
+
+                If you ever wonder whether you matter
+                to people, I hope you remember this
+                little page.
+
+                You do.
+
+                More than you probably realise.
+
+                <br><br>
+
+                Now go enjoy your birthday,
+                smile a lot, and don't forget that
+                your beastie is rooting for you. 🖤💗
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="secret-box">
-
-      <p style="color:#cbbec9">
-
-        You have to press the button.
-        No cheating. 😂
-
-      </p>
-
-
-      <button
-        class="btn"
-        id="secretBtn"
-        type="button"
-      >
-        Unlock it ♡
-      </button>
-
-
-      <div
-        class="secret-message"
-        id="secretMessage"
-      >
-
-        <b>
-          Okay, you found it. 🥹
-        </b>
-
-        <br><br>
-
-        If you ever wonder whether you matter
-        to people, I hope you remember this little page.
-
-        You do.
-
-        More than you probably realise.
-
-        <br><br>
-
-        Now go enjoy your birthday,
-        smile a lot, and don't forget that
-        your beastie is rooting for you. 🖤💗
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -1142,74 +1222,185 @@ footer {
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
-  Made for one very special person
+    Made for one very special person
 
-  <span class="heart">
-    ♥
-  </span>
+    <span class="heart">
+        ♥
+    </span>
 
-  <br>
+    <br>
 
-  <span>
-    18 October • Happy Birthday ♡
-  </span>
+    <span>
+        18 October • Happy Birthday ♡
+    </span>
 
 </footer>
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
 
 <script>
 
 /* =========================================
-   BIRTHDAY MUSIC
-   Starts when "Open your surprise" is clicked
+   EXISTING BIRTHDAY SONG
+
+   ONLY plays when:
+   "Open your surprise 🎁" is clicked
 ========================================= */
 
 const openSurprise =
-  document.getElementById("openSurprise");
+    document.getElementById("openSurprise");
 
 const birthdayAudio =
-  document.getElementById("birthdayAudio");
+    document.getElementById("birthdayAudio");
 
 
-openSurprise.addEventListener("click", function(event) {
+openSurprise.addEventListener(
+    "click",
+    function () {
 
-  /*
-    The click is a real user interaction,
-    so mobile browsers are much more likely
-    to allow audio playback.
-  */
+        birthdayAudio.currentTime = 0;
 
-  birthdayAudio.currentTime = 0;
+        birthdayAudio
+            .play()
+            .catch(function (error) {
 
-  birthdayAudio.play()
-    .then(function() {
+                console.log(
+                    "Birthday audio error:",
+                    error
+                );
 
-      console.log(
-        "Birthday song started 🎵"
-      );
+            });
 
-    })
-    .catch(function(error) {
+        burst();
 
-      console.log(
-        "Audio could not start:",
-        error
-      );
-
-    });
+    }
+);
 
 
-  /* Confetti */
-  burst();
 
-});
+/* =========================================
+   3 NEW RANDOM CLICK SOUNDS
+
+   Put these 3 files in ROOT:
+
+   sound1.mp3
+   sound2.mp3
+   sound3.mp3
+========================================= */
+
+const randomClickSounds = [
+
+    new Audio("sound1.mp3"),
+
+    new Audio("sound2.mp3"),
+
+    new Audio("sound3.mp3")
+
+];
+
+
+let lastClickSound = -1;
+
+
+/*
+   This works for clicks anywhere on the page.
+
+   EXCEPT:
+   Open your surprise button
+
+   because that button has the main
+   birthday song.
+*/
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        /* Don't play random sound
+           on birthday button */
+
+        if (
+            event.target.closest(
+                "#openSurprise"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        /* Choose random sound */
+
+        let randomIndex;
+
+
+        do {
+
+            randomIndex =
+                Math.floor(
+                    Math.random() *
+                    randomClickSounds.length
+                );
+
+        }
+
+        while (
+            randomClickSounds.length > 1 &&
+            randomIndex === lastClickSound
+        );
+
+
+        lastClickSound =
+            randomIndex;
+
+
+        /* Stop any previous
+           random click sound */
+
+        randomClickSounds.forEach(
+            function (sound) {
+
+                sound.pause();
+
+                sound.currentTime = 0;
+
+            }
+        );
+
+
+        /* Play selected sound */
+
+        const selectedSound =
+            randomClickSounds[randomIndex];
+
+
+        selectedSound.currentTime = 0;
+
+
+        selectedSound
+            .play()
+            .catch(function (error) {
+
+                console.log(
+                    "Random click sound error:",
+                    error
+                );
+
+            });
+
+    }
+);
 
 
 
@@ -1218,58 +1409,69 @@ openSurprise.addEventListener("click", function(event) {
 ========================================= */
 
 const heartLayer =
-  document.getElementById("hearts");
+    document.getElementById("hearts");
 
 
 function createHeart() {
 
-  const h =
-    document.createElement("div");
-
-  h.className = "fheart";
+    const h =
+        document.createElement("div");
 
 
-  const symbols = [
-    "♡",
-    "♥",
-    "✦",
-    "✧"
-  ];
+    h.className =
+        "fheart";
 
 
-  h.textContent =
-    symbols[
-      Math.floor(
-        Math.random() * symbols.length
-      )
+    const symbols = [
+        "♡",
+        "♥",
+        "✦",
+        "✧"
     ];
 
 
-  h.style.left =
-    Math.random() * 100 + "%";
+    h.textContent =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
 
 
-  h.style.fontSize =
-    (12 + Math.random() * 18) + "px";
+    h.style.left =
+        Math.random() * 100 + "%";
 
 
-  h.style.animationDuration =
-    (4.5 + Math.random() * 3) + "s";
+    h.style.fontSize =
+        (12 + Math.random() * 18) +
+        "px";
 
 
-  heartLayer.appendChild(h);
+    h.style.animationDuration =
+        (4.5 + Math.random() * 3) +
+        "s";
 
 
-  setTimeout(function() {
+    heartLayer.appendChild(h);
 
-    h.remove();
 
-  }, 8000);
+    setTimeout(
+        function () {
+
+            h.remove();
+
+        },
+        8000
+    );
 
 }
 
 
-setInterval(createHeart, 650);
+setInterval(
+    createHeart,
+    650
+);
 
 
 
@@ -1279,86 +1481,95 @@ setInterval(createHeart, 650);
 
 function burst() {
 
-  const layer =
-    document.getElementById("confetti");
+    const layer =
+        document.getElementById(
+            "confetti"
+        );
 
 
-  for (
-    let i = 0;
-    i < 90;
-    i++
-  ) {
+    for (
+        let i = 0;
+        i < 90;
+        i++
+    ) {
 
-    const c =
-      document.createElement("i");
-
-
-    c.className = "conf";
+        const c =
+            document.createElement("i");
 
 
-    c.style.left =
-      Math.random() * 100 + "%";
+        c.className =
+            "conf";
 
 
-    c.style.animationDelay =
-      (Math.random() * .35) + "s";
+        c.style.left =
+            Math.random() * 100 + "%";
 
 
-    c.style.transform =
-      `rotate(${Math.random() * 360}deg)`;
+        c.style.animationDelay =
+            Math.random() * .35 + "s";
 
 
-    c.style.borderRadius =
-      Math.random() > .5
-        ? "2px"
-        : "50%";
+        c.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
 
 
-    const colors = [
-      "#ff7eb6",
-      "#c4b5fd",
-      "#ffffff",
-      "#f9a8d4"
-    ];
+        c.style.borderRadius =
+            Math.random() > .5
+                ? "2px"
+                : "50%";
 
 
-    c.style.background =
-      colors[
-        Math.floor(
-          Math.random() * colors.length
-        )
-      ];
+        const colors = [
+
+            "#ff7eb6",
+            "#c4b5fd",
+            "#ffffff",
+            "#f9a8d4"
+
+        ];
 
 
-    layer.appendChild(c);
+        c.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
 
 
-    setTimeout(function() {
+        layer.appendChild(c);
 
-      c.remove();
 
-    }, 3800);
+        setTimeout(
+            function () {
 
-  }
+                c.remove();
+
+            },
+            3800
+        );
+
+    }
 
 }
 
 
 
 /* =========================================
-   SMALL CONFETTI ON PAGE LOAD
+   INITIAL CONFETTI
 ========================================= */
 
 window.addEventListener(
-  "load",
-  function() {
+    "load",
+    function () {
 
-    setTimeout(
-      burst,
-      700
-    );
+        setTimeout(
+            burst,
+            700
+        );
 
-  }
+    }
 );
 
 
@@ -1368,26 +1579,37 @@ window.addEventListener(
 ========================================= */
 
 const secretBtn =
-  document.getElementById("secretBtn");
+    document.getElementById(
+        "secretBtn"
+    );
+
 
 const secretMessage =
-  document.getElementById("secretMessage");
+    document.getElementById(
+        "secretMessage"
+    );
 
 
 secretBtn.addEventListener(
-  "click",
-  function() {
+    "click",
+    function () {
 
-    secretMessage.classList.add("show");
+        secretMessage.classList.add(
+            "show"
+        );
 
-    burst();
 
-    secretBtn.textContent =
-      "Unlocked ♡";
+        burst();
 
-    secretBtn.disabled = true;
 
-  }
+        secretBtn.textContent =
+            "Unlocked ♡";
+
+
+        secretBtn.disabled =
+            true;
+
+    }
 );
 
 </script>
